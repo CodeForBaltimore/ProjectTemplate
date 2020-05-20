@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Best Practices - Project Template</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Best Practices";
+    var mkdocs_page_input_path = "Best_Practices.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Project Template</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Project Documentation</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Best Practices</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#project-management">Project Management</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#projects">Projects</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#issues-and-milestones">Issues and Milestones</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tagging-issues">Tagging Issues</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Code_of_Conduct/">Code of Conduct</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Tech_Spec/">Tech Spec</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Project Template</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Best Practices</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="best-practices">Best Practices</h1>
+<p>Code for Baltimore projects should be built with the intention of deploying on <a href="https://heroku.com">Heroku</a> or <a href="https://netlify.com">Netlify</a>. For details on Heroku Best Practices see their <a href="https://devcenter.heroku.com/articles/node-best-practices">developer documentation</a>.</p>
+<!-- TOC -->
+
+<ul>
+<li><a href="#best-practices">Best Practices</a><ul>
+<li><a href="#project-management">Project Management</a><ul>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#issues-and-milestones">Issues and Milestones</a></li>
+<li><a href="#tagging-issues">Tagging Issues</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#code-quality-standards">Code Quality Standards</a><ul>
+<li><a href="#style-guides">Style Guides</a></li>
+</ul>
+</li>
+<li><a href="#static-code-analysis">Static Code Analysis</a></li>
+<li><a href="#git-and-branching">Git and Branching</a><ul>
+<li><a href="#branch-names">Branch Names</a></li>
+<li><a href="#merging-and-pull-requests">Merging and Pull Requests</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<h2 id="project-management">Project Management</h2>
+<p>We are using Github Issues to track outstanding issues and work for projects.</p>
+<h3 id="projects">Projects</h3>
+<p>Github Projects help organize our repositories by creating a Kanban board to track issues. These boards can be automatically generated by Github when creating the Project and should include a Todo, In Progress, Under Review, Reviewer Approved, and Done column. As issues are added to a Project they should be added to the board. A repo can have one or many Projects or boards at any given time.</p>
+<h3 id="issues-and-milestones">Issues and Milestones</h3>
+<p>When breaking down work it is important to add tasks to the Github project. For convenience various types of issues have templates built into this repo for easy issue entry. Before tasks are entered the project managers should agree on milestones based on the Project objectives. Issues should be tracked against Milestones so progress can be measured and planned for.</p>
+<h3 id="tagging-issues">Tagging Issues</h3>
+<p>When entering issues tagging can be used to further organize work or make work more visible to team members.</p>
+<h1 id="code-quality-standards">Code Quality Standards</h1>
+<p>Regardless of Language:</p>
+<ul>
+<li>Default to <code>lowerCamelCase</code> naming convention</li>
+<li>Use static code analysis tools to improve code quality and consistency</li>
+<li>Code modifications within a repository should be performed on a branch, that will be merged to master via a pull request once approved.</li>
+<li>Provide meaningful code comments</li>
+<li>All commits must include a useful commit message</li>
+</ul>
+<h2 id="style-guides">Style Guides</h2>
+<p>Consistent style guidelines for each language should be used. Where possible, openly published standards by authorities providing or using the language will be used.</p>
+<p>Example: Google has openly published style guides for many languages in wide use on their open source projects, and these can be adopted for use in this project: <a href="https://google.github.io/styleguide/">Google Language Specific Styleguides</a></p>
+<h1 id="static-code-analysis">Static Code Analysis</h1>
+<p>Static code analysis tools should be used when possible, to monitor and improve code quality. This may be integrated in the local development environment, automated repository commit checks, automated CI/CD pipelines, or other steps in the code development process.</p>
+<h1 id="git-and-branching">Git and Branching</h1>
+<p>All code work should be done in an isolated or feature branch off of the <code>master</code> branch.  Before starting work on new code, developers should create their feature branch using a standard naming convention determined by the project.  </p>
+<h2 id="branch-names">Branch Names</h2>
+<p>Branch names should follow this patter: <code>&lt;your github username&gt;/issue-&lt;github issue number&gt;</code>. This will ensure there are no branch name conflicts, and anyone looking for your branch will know what it is called based on the issue addressed. For example if your username was letsGoOs, and you were working on issue 8, then your branch name would be <code>letsGoOs/issue-8</code>. If you wanted to make a new branch to continue your work on your issue then add a suffix with an incremented number. To continue the previous example if you wanted to make a second branch for your issue 8 work your second branch would be called <code>letsGoOs/issue-8-2</code>.</p>
+<h2 id="merging-and-pull-requests">Merging and Pull Requests</h2>
+<p>When work is complete, and after static code analysis has been performed, the developer should submit a pull request in Github.  A pull request template has been provided, and developers should take care to fill out the form as completely as possible when submitting new pull requests omitting any sections that are deemed unnecessary for that particular submission.  Pull requests should require at least 1 review from another verified team member before they are approved and merged into the <code>master</code> branch.  </p>
+<p>While not strictly required, it is recommended that pull requests are submitted early on in the development process with the intention of maintaining high visibility over the work while it is in progress. </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Code_of_Conduct/" class="btn btn-neutral float-right" title="Code of Conduct">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Project Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Code_of_Conduct/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
